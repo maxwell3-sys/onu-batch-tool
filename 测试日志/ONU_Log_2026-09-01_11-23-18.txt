@@ -1,0 +1,78 @@
+[2026-09-01 11:23:25] 共检测到 1 个ONU
+[2026-09-01 11:23:25] Telnet连接OLT: 172.16.182.2
+[2026-09-01 11:23:26] 
+[2026-09-01 11:23:27] 
+******************************************************************************
+* Copyright (c) 2004-2024 New H3C Technologies Co., Ltd. All rights reserved.*
+* Without the owner's prior written consent,                                 *
+* no decompiling or reverse-engineering shall be allowed.                    *
+******************************************************************************
+
+<H3C>
+<H3C>
+[2026-09-01 11:23:29] 
+<H3C>
+[2026-09-01 11:23:29] 开始处理ONU: 192.168.99.5
+[2026-09-01 11:23:29] >>> telnet 192.168.99.5 23
+[2026-09-01 11:23:31] telnet 192.168.99.5 23
+Trying 192.168.99.5 ...
+Press CTRL+K to abort
+Connected to 192.168.99.5 ...
+tc login: 
+[2026-09-01 11:23:31] >>> admin
+[2026-09-01 11:23:32] admin
+Password: 
+[2026-09-01 11:23:32] >>> admin
+[2026-09-01 11:23:33] 
+
+**************************************************************************
+*    Copyright (c) 2004-2023 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-09-01 11:23:33] >>> sys
+[2026-09-01 11:23:34] sys
+System View: return to User View with Ctrl+Z.
+[H3C]
+[2026-09-01 11:23:34] >>> debug
+[2026-09-01 11:23:35] debug
+
+Login authentication
+Password: 
+[2026-09-01 11:23:36] >>> diagnosis
+[2026-09-01 11:23:36] *********
+# 
+[2026-09-01 11:23:37] >>> tcapi show xpon
+[2026-09-01 11:23:37] tcapi show xpon
+OID [129:1][XPON]:
+
+	OID [130:1][Common]:
+		[phyStatus = epon_phy_up]
+		[trafficStatus = up]
+		[startXpon = No]
+		[CfgLoading = Done]
+		[GponBindIfc = Yes]
+
+	OID [131:1][LinkCfg]:
+		[Mode = 4]
+		[LinkSta = 0]
+
+	OID [132:1][TR069]:
+
+	OID [133:1][VOICE]:
+
+	OID [134:1][IPHost1]:
+
+	OID [135:1][IPHost2]:
+
+
+# 
+[2026-09-01 11:23:38] >>> cmd(ctrl+k)
+[2026-09-01 11:23:38] 
+<H3C>
+[2026-09-01 11:23:39] ONU处理完成: 192.168.99.5
+[2026-09-01 11:23:39] 任务结束

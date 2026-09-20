@@ -1,0 +1,60 @@
+[2026-06-15 11:34:39] 共检测到 1 个ONU
+[2026-06-15 11:34:39] Telnet连接OLT: 172.16.182.2
+[2026-06-15 11:34:40] 
+[2026-06-15 11:34:41] 
+******************************************************************************
+* Copyright (c) 2004-2024 New H3C Technologies Co., Ltd. All rights reserved.*
+* Without the owner's prior written consent,                                 *
+* no decompiling or reverse-engineering shall be allowed.                    *
+******************************************************************************
+
+<H3C>
+<H3C>
+[2026-06-15 11:34:43] 
+<H3C>
+[2026-06-15 11:34:43] 开始处理ONU: 192.168.99.2
+[2026-06-15 11:34:43] >>> telnet 192.168.99.2 23
+[2026-06-15 11:34:45] telnet 192.168.99.2 23
+Trying 192.168.99.2 ...
+Press CTRL+K to abort
+Connected to 192.168.99.2 ...
+tc login: 
+[2026-06-15 11:34:45] >>> admin
+[2026-06-15 11:34:45] admin
+Password: 
+[2026-06-15 11:34:46] >>> admin
+[2026-06-15 11:34:46] 
+
+**************************************************************************
+*    Copyright (c) 2004-2023 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-06-15 11:34:47] >>> sys
+[2026-06-15 11:34:47] sys
+System View: return to User View with Ctrl+Z.
+[H3C]
+[2026-06-15 11:34:48] >>> debug
+[2026-06-15 11:34:48] debug
+
+Login authentication
+Password: 
+[2026-06-15 11:34:49] >>> diagnosis
+[2026-06-15 11:34:49] *********
+# 
+[2026-06-15 11:34:50] >>> dmesg -c
+[2026-06-15 11:34:50] dmesg -c
+# 
+[2026-06-15 11:34:51] >>> cmd(wait3)
+[2026-06-15 11:34:51] cmd(wait3)
+/bin/sh: Syntax error: word unexpected (expecting ")")
+# 
+[2026-06-15 11:34:52] >>> cmd(ctrl+k)
+[2026-06-15 11:34:52] 
+<H3C>
+[2026-06-15 11:34:53] ONU处理完成: 192.168.99.2
+[2026-06-15 11:34:53] 任务结束

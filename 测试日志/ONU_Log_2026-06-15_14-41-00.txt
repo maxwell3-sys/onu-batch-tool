@@ -1,0 +1,959 @@
+[2026-06-15 14:41:00] 共检测到 16 个ONU
+[2026-06-15 14:41:00] SSH连接OLT: 222.161.207.14:50022
+[2026-06-15 14:41:02] ******************************************************************************
+* Copyright (c) 2004-2025 New H3C Technologies Co., Ltd. All rights reserved.*
+* Without the owner's prior written consent,                                 *
+* no decompiling or reverse-engineering shall be allowed.                    *
+******************************************************************************
+
+<CCDZKJ-OLT>
+[2026-06-15 14:41:02] 开始处理ONU: 192.168.1.152
+[2026-06-15 14:41:02] >>> telnet 192.168.1.152 10187
+[2026-06-15 14:41:04] telnet 192.168.1.152 10187
+Trying 192.168.1.152 ...
+Press CTRL+K to abort
+Connected to 192.168.1.152 ...
+tc login: 
+[2026-06-15 14:41:04] >>> admin
+[2026-06-15 14:41:05] admin
+Password: 
+[2026-06-15 14:41:05] >>> admin
+[2026-06-15 14:41:05] 
+$ 
+[2026-06-15 14:41:05] >>> su
+[2026-06-15 14:41:06] su
+Password: 
+[2026-06-15 14:41:06] >>> H3C@diagnosis.com
+[2026-06-15 14:41:06] 
+# 
+[2026-06-15 14:41:06] >>> top -b -n 1
+[2026-06-15 14:41:07] top -b -n 1
+Mem: 335804K used, 73148K free, 11148K shrd, 4K buff, 120644K cached
+CPU:  4.5% usr  0.0% sys  0.0% nic 95.4% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 0.19 0.25 0.26 2/206 13702
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  474     1 H3CT     S     160m  40.0   3  2.2 /userfs/bin/lanhostmgr_ng
+ 1083     1 admin    S     532m 133.1   3  0.0 /usr/iip/client/iip_client --name iip.wlan --plugin /usr/iip/plugins/libiip_wlan.so --out /tmp/iip_wlan.out
+  117     1 admin    S     484m 121.2   1  0.0 /userfs/bin/omci
+ 1071     1 admin    S     468m 117.0   3  0.0 /usr/iip/client/iip_client --name iip_common --plugin /usr/iip/plugins/libiip_plugin.so --out /tmp/iip_common.out
+ 4078  1117 admin    S     342m  85.5   3  0.0 /usr/bin/capwap / -d 3
+ 1076     1 admin    S     332m  83.0   3  0.0 /usr/iip/client/iip_client --name iip_lan --plugin /usr/iip/plugins/libiip_lan.so --out /tmp/iip_lan.out
+  185     1 admin    S     248m  62.2   1  0.0 /userfs/bin/svchost -c /etc/central_ctrl.svc
+  179     1 admin    S     234m  58.7   1  0.0 /userfs/bin/svchost -c /etc/wlan.svc
+ 1038     1 admin    S     155m  38.7   3  0.0 /userfs/bin/trafficvpninfo
+ 2144     1 admin    S     155m  38.7   1  0.0 /userfs/bin/trafficvpninfo
+  181     1 admin    S     152m  38.0   1  0.0 /userfs/bin/svchost -c /etc/wan_related.svc
+  261     1 admin    S     152m  38.0   1  0.0 /userfs/bin/ponmgr_cfg
+  997     1 admin    S    98.0m  24.5   1  0.0 tcwdog -t 1 /dev/watchdog
+ 1520  1117 admin    S    89932  21.9   3  0.0 /usr/sbin/h3ccloud -c /etc/config/h3ccloud -d 8 -f /tmp/log/h3ccloud.log
+  177     1 admin    S    85368  20.8   1  0.0 /userfs/bin/svchost -c /etc/wan.svc
+ 1477  1117 admin    S    84728  20.6   3  0.0 /usr/bin/iip_lldp
+  154     1 admin    S    82792  20.2   1  0.0 /userfs/bin/svchost -c /etc/cfg.svc
+  183     1 admin    S    82216  20.0   1  0.0 /userfs/bin/svchost -c /etc/other.svc
+  187     1 admin    S    82048  20.0   1  0.0 /userfs/bin/svchost -c /etc/voip.svc
+ 1129     1 admin    S    81988  20.0   3  0.0 /userfs/bin/abnormal_diag
+ 1055     1 admin    S    76348  18.6   3  0.0 /userfs/bin/iip_lpdt
+  122     1 admin    S    33012   8.0   1  0.0 /userfs/bin/homenas
+ 2322     1 H3CT     S    16788   4.1   0  0.0 /userfs/bin/smbd -D
+ 1854     1 admin    S    16436   4.0   3  0.0 /userfs/bin/usb_auto_mount
+ 2262     1 H3CT     S     9564   2.3   0  0.0 /userfs/bin/nmbd -D
+ 3957     1 H3CT     S     9176   2.2   1  0.0 /sbin/udhcpc -i nas1_1 -s /usr/script/udhcpc_nodef.sh -H EGT904-H-T7WF -p /var/run/nas1_1/udhcpc.pid
+ 1672  1117 admin    S     8832   2.1   3  0.0 /usr/bin/wlanopt
+ 1180  1117 admin    S     8772   2.1   3  0.0 /usr/sbin/hostapd -f /tmp/log/hostap.log -K -t -dd -g /var/run/hostapd/global_ctrl
+  175     1 admin    S     8444   2.0   1  0.0 /userfs/bin/svchost -c /etc/pon.svc
+  998     1 H3CT     S     8344   2.0   3  0.0 /userfs/bin/boa -c /boaroot -d
+  834     1 H3CT     S     8144   1.9   2  0.0 /usr/bin/utelnetd -p 10187 -l /bin/login -d
+ 1047     1 admin    S     8116   1.9   3  0.0 /usr/sbin/hostapd -g /var/run/hostapd/global
+ 1048     1 admin    S     8004   1.9   3  0.0 /usr/sbin/wpa_supplicant -n -g /var/run/wpa_supplicant/global
+ 1596  1117 admin    S     6972   1.7   3  0.0 /usr/bin/wlanmgr
+ 1560  1117 admin    S     6080   1.4   3  0.0 /usr/bin/wipc
+ 1052     1 admin    S     4712   1.1   3  0.0 /bin/sh /usr/iip/iip_monitor.sh
+ 1141     1 admin    S     4712   1.1   3  0.0 /usr/sbin/crond -c /etc/crons/
+    1     0 admin    S     4712   1.1   3  0.0 init
+13687 13638 admin    S     4712   1.1   2  0.0 sh
+13701 13687 admin    R     4712   1.1   0  0.0 top -b -n 1
+ 1146     1 admin    S     4712   1.1   3  0.0 init
+13638   834 1        S     4712   1.1   1  0.0 -sh
+13696  1071 admin    S     4712   1.1   3  0.0 sh -c -- mpstat -u 1 1 | tail -n 1
+13698 13696 admin    S     4712   1.1   3  0.0 tail -n 1
+13646  1052 admin    S     4580   1.1   3  0.0 sleep 5
+ 1436  1117 admin    S     3816   0.9   3  0.0 /sbin/logd -S 1024
+ 1652  1117 admin    S     3540   0.8   3  0.0 /usr/sbin/crond -f -c /etc/crontabs -l 5
+ 1114     1 admin    S     3276   0.8   3  0.0 lxc-start -n lxc -P /iip -f /opt/lxc/config -o /tmp/lxc.log -l DEBUG -d
+ 1503  1117 admin    S     2928   0.7   3  0.0 lldpd -I eth0.* -r
+ 1117  1114 admin    S     2888   0.7   3  0.0 /sbin/procd
+ 1040     1 admin    S     2824   0.6   3  0.0 /userfs/bin/wifi_traffic_mgr
+ 1437  1117 admin    S     2732   0.6   3  0.0 /sbin/logread -f -p /var/run/logread.1.pid -F /tmp/tmplogfile/log.txt -S 1024 -h H3C -u -I
+  131     1 admin    S     2632   0.6   3  0.0 /userfs/bin/ubusd
+ 1150  1117 admin    S     2376   0.5   1  0.0 /sbin/ubusd
+13697 13696 admin    S     1904   0.4   3  0.0 mpstat -u 1 1
+ 1045     1 admin    S     1876   0.4   3  0.0 /userfs/bin/core_monitor
+  222     2 admin    SW       0   0.0   2  0.0 [xpon_daemon]
+  123     2 admin    IW       0   0.0   3  0.0 [kworker/3:2-eve]
+   30     2 admin    SW       0   0.0   3  0.0 [ksoftirqd/3]
+   15     2 admin    IW       0   0.0   1  0.0 [rcu_sched]
+ 3335     2 admin    SW       0   0.0   0  0.0 [RtmpMlmeTask_01]
+ 3328     2 admin    SW       0   0.0   0  0.0 [HwCtrlTask_0]
+ 3326     2 admin    SW       0   0.0   0  0.0 [BPCCCmdQTask_01]
+   51     2 admin    IW       0   0.0   0  0.0 [kworker/0:2-eve]
+ 3333     2 admin    SW       0   0.0   2  0.0 [DeviceTask_0]
+   41     2 admin    SW       0   0.0   0  0.0 [kcompactd0]
+   20     2 admin    SW       0   0.0   1  0.0 [ksoftirqd/1]
+  102     2 admin    IW       0   0.0   1  0.0 [kworker/1:2-mm_]
+   14     2 admin    SW       0   0.0   0  0.0 [ksoftirqd/0]
+   49     2 admin    IW       0   0.0   2  0.0 [kworker/2:1-mm_]
+   25     2 admin    SW       0   0.0   2  0.0 [ksoftirqd/2]
+  939     2 admin    IW       0   0.0   3  0.0 [kworker/u12:2-e]
+16561     2 admin    IW       0   0.0   2  0.0 [kworker/u11:1-e]
+   32     2 admin    IW<      0   0.0   3  0.0 [kworker/3:0H-kb]
+30803     2 admin    IW       0   0.0   2  0.0 [kworker/u11:0-e]
+    9     2 admin    IW<      0   0.0   0  0.0 [kworker/0:0H-kv]
+29084     2 admin    IW       0   0.0   2  0.0 [kworker/u11:2-e]
+   94     2 admin    SW       0   0.0   2  0.0 [ubifs_bgt0_0]
+   22     2 admin    IW<      0   0.0   1  0.0 [kworker/1:0H-kv]
+26018     2 admin    IW       0   0.0   1  0.0 [kworker/u10:1-e]
+26005     2 admin    IW<      0   0.0   2  0.0 [kworker/2:1H-kb]
+26937     2 admin    IW       0   0.0   0  0.0 [kworker/u9:1-ev]
+   92     2 admin    SW       0   0.0   3  0.0 [ubi_bgt0d]
+   48     2 admin    IW       0   0.0   1  0.0 [kworker/1:1-eve]
+ 5270     2 admin    IW       0   0.0   0  0.0 [kworker/u9:0-ev]
+   11     2 admin    IW       0   0.0   1  0.0 [kworker/u8:0-cf]
+ 7686     2 admin    IW       0   0.0   1  0.0 [kworker/u10:0-e]
+20339     2 admin    IW       0   0.0   1  0.0 [kworker/u12:1-e]
+    2     0 admin    SW       0   0.0   2  0.0 [kthreadd]
+   16     2 admin    SW       0   0.0   0  0.0 [migration/0]
+    3     2 admin    SW       0   0.0   3  0.0 [pool_workqueue_]
+    4     2 admin    IW<      0   0.0   0  0.0 [kworker/R-rcu_g]
+    5     2 admin    IW<      0   0.0   0  0.0 [kworker/R-rcu_p]
+    6     2 admin    IW<      0   0.0   0  0.0 [kworker/R-slub_]
+    7     2 admin    IW<      0   0.0   0  0.0 [kworker/R-netns]
+    8     2 admin    IW       0   0.0   0  0.0 [kworker/0:0-eve]
+   12     2 admin    IW<      0   0.0   0  0.0 [kworker/R-mm_pe]
+   13     2 admin    IW       0   0.0   0  0.0 [rcu_tasks_trace]
+   17     2 admin    SW       0   0.0   0  0.0 [cpuhp/0]
+   18     2 admin    SW       0   0.0   1  0.0 [cpuhp/1]
+   19     2 admin    SW       0   0.0   1  0.0 [migration/1]
+   23     2 admin    SW       0   0.0   2  0.0 [cpuhp/2]
+   24     2 admin    SW       0   0.0   2  0.0 [migration/2]
+   26     2 admin    IW       0   0.0   2  0.0 [kworker/2:0-mm_]
+   27     2 admin    IW<      0   0.0   2  0.0 [kworker/2:0H-ev]
+   28     2 admin    SW       0   0.0   3  0.0 [cpuhp/3]
+   29     2 admin    SW       0   0.0   3  0.0 [migration/3]
+   37     2 admin    IW<      0   0.0   3  0.0 [kworker/R-inet_]
+   39     2 admin    SW       0   0.0   3  0.0 [oom_reaper]
+   40     2 admin    IW<      0   0.0   2  0.0 [kworker/R-write]
+   42     2 admin    IW<      0   0.0   2  0.0 [kworker/R-kbloc]
+   43     2 admin    IW<      0   0.0   2  0.0 [kworker/R-md]
+   44     2 admin    IW<      0   0.0   3  0.0 [kworker/R-md_bi]
+   45     2 admin    SW       0   0.0   3  0.0 [watchdogd]
+   46     2 admin    IW<      0   0.0   0  0.0 [kworker/0:1H]
+   47     2 admin    SW       0   0.0   3  0.0 [kswapd0]
+   52     2 admin    IW<      0   0.0   2  0.0 [kworker/R-dm_bu]
+   53     2 admin    IW<      0   0.0   3  0.0 [kworker/R-mld]
+   54     2 admin    IW<      0   0.0   2  0.0 [kworker/R-ipv6_]
+   55     2 admin    IW<      0   0.0   3  0.0 [kworker/R-kstrp]
+   57     2 admin    IW<      0   0.0   2  0.0 [kworker/R-kdmfl]
+   58     2 admin    IW<      0   0.0   3  0.0 [kworker/R-kveri]
+   66     2 admin    IW<      0   0.0   1  0.0 [kworker/1:1H]
+ 1691     2 admin    IW<      0   0.0   1  0.0 [kworker/R-cfg80]
+ 1707     2 admin    SW       0   0.0   3  0.0 [ser_mngr]
+ 1758     2 admin    IW       0   0.0   1  0.0 [kworker/u8:1]
+ 3324     2 admin    SW       0   0.0   0  0.0 [RtmpCmdQTask_01]
+ 3325     2 admin    SW       0   0.0   3  0.0 [RtmpWscTask_01]
+ 3327     2 admin    SW       0   0.0   1  0.0 [ser_task_01]
+ 3334     2 admin    IW<      0   0.0   0  0.0 [kworker/R-ph_de]
+13055     2 admin    IW       0   0.0   3  0.0 [kworker/3:1]
+13673     2 admin    IW       0   0.0   0  0.0 [kworker/u9:2-ev]
+22746     2 admin    IW<      0   0.0   3  0.0 [kworker/3:2H]
+
+# 
+[2026-06-15 14:41:07] >>> cat /proc/meminfo; free -m
+[2026-06-15 14:41:07] cat /proc/meminfo; free -m
+MemTotal:         408952 kB
+MemFree:           73148 kB
+MemAvailable:     103072 kB
+Buffers:               4 kB
+Cached:           120644 kB
+SwapCached:            0 kB
+Active:            39784 kB
+Inactive:         113896 kB
+Active(anon):       7216 kB
+Inactive(anon):    36964 kB
+Active(file):      32568 kB
+Inactive(file):    76932 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:         81916 kB
+SwapFree:          81916 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         32968 kB
+Mapped:            28192 kB
+Shmem:             11148 kB
+KReclaimable:       6104 kB
+Slab:              88808 kB
+SReclaimable:       6104 kB
+SUnreclaim:        82704 kB
+KernelStack:        3348 kB
+PageTables:         2860 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      286392 kB
+Committed_AS:     665912 kB
+VmallocTotal:   257687552 kB
+VmallocUsed:       44856 kB
+VmallocChunk:          0 kB
+Percpu:              720 kB
+              total        used        free      shared  buff/cache   available
+Mem:            399         204          71          11         124         101
+Swap:            80           0          80
+# 
+[2026-06-15 14:41:07] >>> cat /proc/interrupts
+[2026-06-15 14:41:08] cat /proc/interrupts
+           CPU0       CPU1       CPU2       CPU3       
+ 11:  769633655 1823533126  769631828 1269708310     GICv3  30 Level     arch_timer
+ 14:          0          0          0          0     GICv3  75 Level     phy_isr
+ 18:    1348830          0          0          0     GICv3  50 Level     ttyS0
+ 21:     556979          0          0          0     GICv3 150 Level     rxdone0
+ 22:          0          0          0          0     GICv3 151 Level     rxdone1
+ 27:          0          0          0          0     GICv3 157 Level     npuMbox2host
+ 28:          0          0          0          0     GICv3 135 Level     npu_wdog0
+ 29:          0          0          0          0     GICv3 141 Level     npu_wdog1
+ 30:          0          0          0          0     GICv3 145 Level     npu_wdog2
+ 31:          0          0          0          0     GICv3 149 Level     npu_wdog3
+ 32:          0          0          0          0     GICv3 166 Level     npu_wdog4
+ 33:          0          0          0          0     GICv3 167 Level     npu_wdog5
+ 34:          0          0          0          0     GICv3 168 Level     npu_wdog6
+ 35:          0          0          0          0     GICv3 169 Level     npu_wdog7
+ 36:          0          0          4          0     GICv3  69 Level     qdma_lan_int1
+ 37:          0          0          0          0     GICv3  87 Level     qdma_lan_int2
+ 38:          0          0          0          0     GICv3  88 Level     qdma_lan_int3
+ 40:   78883547          0          0          0     GICv3  70 Level     qdma_wan_int1
+ 41:          0          0          0          0     GICv3  90 Level     qdma_wan_int2
+ 42:          0          0          0          0     GICv3  91 Level     qdma_wan_int3
+ 43:          0          0          0          0     GICv3  92 Level     qdma_wan_int4
+ 44:          0          0          0          0     GICv3  81 Level     FE
+ 55:          0          0          0          0     GICv3  65 Level     xhci-hcd:usb1
+ 56:          0          0          0          0     GICv3 182 Level     xhci-hcd:usb3
+ 57:   12192188          0          0          0     GICv3  74 Level     xpon_isr
+ 58:          0          0          0          0     GICv3  66 Level     dying gasp
+ 59:  188495585          0          0          0      INTx   0 Edge    -INTx      mt7993-vec_data0
+ 60:    7200227          0          0          0      INTx   0 Edge    -INTx      mt799b-vec_data0
+IPI0:      1305      90981       2829     262980       Rescheduling interrupts
+IPI1:  69718762  104074266   48949246   48216519       Function call interrupts
+IPI2:         0          0          0          0       CPU stop interrupts
+IPI3:         0          0          0          0       CPU stop (for crash dump) interrupts
+IPI4:         0          0          0          0       Timer broadcast interrupts
+IPI5:         0          0          0          0       IRQ work interrupts
+IPI6:         0          0          0          0       CPU wake-up interrupts
+Err:          0
+# 
+[2026-06-15 14:41:08] >>> echo show_BoB_information > /proc/pon_phy/debug ;dmesg -c
+[2026-06-15 14:41:08] echo show_BoB_information > /proc/pon_phy/debug ;dmesg -c
+[dhcpExtractOption43 395] AcOption43[8007000001c0a81701] write success
+[dhcpExtractOption43 395] AcOption43[8007000001c0a81701] write success
+[dhcpExtractOption43 395] AcOption43[8007000001c0a81701] write success
+BOSA_temperature = 55.194 C
+I bias = 17.510mA
+VCC = 3.3276V
+Transciver Tx power : 40119 uW(6.05 dBm)
+Transciver Rx power : 150 uW(-18.26 dBm)
+# 
+[2026-06-15 14:41:08] >>> ps -ef
+[2026-06-15 14:41:09] ps -ef
+PID   USER     TIME  RSS  STAT COMMAND
+    1 admin     0:03 2176 S    init
+    2 admin     0:00    0 SW   [kthreadd]
+    3 admin     0:00    0 SW   [pool_workqueue_]
+    4 admin     0:00    0 IW<  [kworker/R-rcu_g]
+    5 admin     0:00    0 IW<  [kworker/R-rcu_p]
+    6 admin     0:00    0 IW<  [kworker/R-slub_]
+    7 admin     0:00    0 IW<  [kworker/R-netns]
+    8 admin     0:00    0 IW   [kworker/0:0-eve]
+    9 admin     0:01    0 IW<  [kworker/0:0H-kv]
+   11 admin     0:00    0 IW   [kworker/u8:0-cf]
+   12 admin     0:00    0 IW<  [kworker/R-mm_pe]
+   13 admin     0:00    0 IW   [rcu_tasks_trace]
+   14 admin     1:30    0 SW   [ksoftirqd/0]
+   15 admin     1h19    0 IW   [rcu_sched]
+   16 admin     0:00    0 SW   [migration/0]
+   17 admin     0:00    0 SW   [cpuhp/0]
+   18 admin     0:00    0 SW   [cpuhp/1]
+   19 admin     0:00    0 SW   [migration/1]
+   20 admin     3:09    0 SW   [ksoftirqd/1]
+   22 admin     0:00    0 IW<  [kworker/1:0H-kv]
+   23 admin     0:00    0 SW   [cpuhp/2]
+   24 admin     0:00    0 SW   [migration/2]
+   25 admin     0:05    0 SW   [ksoftirqd/2]
+   26 admin     0:00    0 IW   [kworker/2:0-mm_]
+   27 admin     0:00    0 IW<  [kworker/2:0H-ev]
+   28 admin     0:00    0 SW   [cpuhp/3]
+   29 admin     0:00    0 SW   [migration/3]
+   30 admin     1h28    0 SW   [ksoftirqd/3]
+   32 admin     0:02    0 IW<  [kworker/3:0H-kb]
+   37 admin     0:00    0 IW<  [kworker/R-inet_]
+   39 admin     0:00    0 SW   [oom_reaper]
+   40 admin     0:00    0 IW<  [kworker/R-write]
+   41 admin     3:32    0 SW   [kcompactd0]
+   42 admin     0:00    0 IW<  [kworker/R-kbloc]
+   43 admin     0:00    0 IW<  [kworker/R-md]
+   44 admin     0:00    0 IW<  [kworker/R-md_bi]
+   45 admin     0:00    0 SW   [watchdogd]
+   46 admin     0:00    0 IW<  [kworker/0:1H]
+   47 admin     0:00    0 SW   [kswapd0]
+   48 admin     0:00    0 IW   [kworker/1:1-eve]
+   49 admin     0:28    0 IW   [kworker/2:1-mm_]
+   51 admin     8:45    0 IW   [kworker/0:2-mm_]
+   52 admin     0:00    0 IW<  [kworker/R-dm_bu]
+   53 admin     0:00    0 IW<  [kworker/R-mld]
+   54 admin     0:00    0 IW<  [kworker/R-ipv6_]
+   55 admin     0:00    0 IW<  [kworker/R-kstrp]
+   57 admin     0:00    0 IW<  [kworker/R-kdmfl]
+   58 admin     0:00    0 IW<  [kworker/R-kveri]
+   66 admin     0:00    0 IW<  [kworker/1:1H]
+   92 admin     0:00    0 SW   [ubi_bgt0d]
+   94 admin     0:00    0 SW   [ubifs_bgt0_0]
+  102 admin     2:04    0 IW   [kworker/1:2-mm_]
+  117 admin     6h21 6400 S    /userfs/bin/omci
+  122 admin     0:00 2944 S    /userfs/bin/homenas
+  123 admin     1h51    0 IW   [kworker/3:2-eve]
+  131 admin     3h10 1280 S    /userfs/bin/ubusd
+  154 admin    46:37 4480 S    /userfs/bin/svchost -c /etc/cfg.svc
+  175 admin    20:34 3584 S    /userfs/bin/svchost -c /etc/pon.svc
+  177 admin     5h30 4736 S    /userfs/bin/svchost -c /etc/wan.svc
+  179 admin    10h58 5888 S    /userfs/bin/svchost -c /etc/wlan.svc
+  181 admin    20:32 3840 S    /userfs/bin/svchost -c /etc/wan_related.svc
+  183 admin    14:07 3712 S    /userfs/bin/svchost -c /etc/other.svc
+  185 admin     7h11 3712 S    /userfs/bin/svchost -c /etc/central_ctrl.svc
+  187 admin     8h11 3328 S    /userfs/bin/svchost -c /etc/voip.svc
+  222 admin     5h02    0 SW   [xpon_daemon]
+  261 admin     6:23 3328 S    /userfs/bin/ponmgr_cfg
+  474 H3CT      6h49 3584 S    /userfs/bin/lanhostmgr_ng
+  834 H3CT      0:01 1152 S    /usr/bin/utelnetd -p 10187 -l /bin/login -d
+  939 admin     0:04    0 IW   [kworker/u12:2-e]
+  997 admin     5:34 1152 S    tcwdog -t 1 /dev/watchdog
+  998 H3CT      0:00 2944 S    /userfs/bin/boa -c /boaroot -d
+ 1038 admin    14:27 4096 S    /userfs/bin/trafficvpninfo
+ 1040 admin     0:01 1152 S    /userfs/bin/wifi_traffic_mgr
+ 1045 admin    15:09 1024 S    /userfs/bin/core_monitor
+ 1047 admin    32:28 4608 S    /usr/sbin/hostapd -g /var/run/hostapd/global
+ 1048 admin     1:47 3328 S    /usr/sbin/wpa_supplicant -n -g /var/run/wpa_supp
+ 1052 admin    44:56 2432 S    /bin/sh /usr/iip/iip_monitor.sh
+ 1055 admin     4h25 1280 S    /userfs/bin/iip_lpdt
+ 1071 admin     1h11 4060 S    /usr/iip/client/iip_client --name iip_common --p
+ 1076 admin     4h49 4444 S    /usr/iip/client/iip_client --name iip_lan --plug
+ 1083 admin    18:52 5724 S    /usr/iip/client/iip_client --name iip.wlan --plu
+ 1114 admin     0:00 1948 S    lxc-start -n lxc -P /iip -f /opt/lxc/config -o /
+ 1117 admin     0:00 1792 S    /sbin/procd
+ 1129 admin     0:26 2944 S    /userfs/bin/abnormal_diag
+ 1141 admin     0:15 1664 S    /usr/sbin/crond -c /etc/crons/
+ 1146 admin     0:00  772 S    init
+ 1150 admin     0:20 1536 S    /sbin/ubusd
+ 1180 admin     1:41 4096 S    /usr/sbin/hostapd -f /tmp/log/hostap.log -K -t -
+ 1436 admin     0:45 2688 S    /sbin/logd -S 1024
+ 1437 admin     0:13 1536 S    /sbin/logread -f -p /var/run/logread.1.pid -F /t
+ 1477 admin     1:25 1664 S    /usr/bin/iip_lldp
+ 1503 admin     2:12 2048 S    lldpd -I eth0.* -r
+ 1520 admin     1h58 4096 S    /usr/sbin/h3ccloud -c /etc/config/h3ccloud -d 8 
+ 1560 admin     1h02 2944 S    /usr/bin/wipc
+ 1596 admin    52:58 3456 S    /usr/bin/wlanmgr
+ 1652 admin     1:17 1664 S    /usr/sbin/crond -f -c /etc/crontabs -l 5
+ 1672 admin     1h44 4480 S    /usr/bin/wlanopt
+ 1691 admin     0:00    0 IW<  [kworker/R-cfg80]
+ 1707 admin     0:00    0 SW   [ser_mngr]
+ 1758 admin     0:00    0 IW   [kworker/u8:1]
+ 1854 admin     0:00 1560 S    /userfs/bin/usb_auto_mount
+ 2144 admin    12:31 3968 S    /userfs/bin/trafficvpninfo
+ 2262 H3CT      2:40 2868 S    /userfs/bin/nmbd -D
+ 2322 H3CT      1:54 7156 S    /userfs/bin/smbd -D
+ 3324 admin     0:00    0 SW   [RtmpCmdQTask_01]
+ 3325 admin     0:00    0 SW   [RtmpWscTask_01]
+ 3326 admin    17:30    0 SW   [BPCCCmdQTask_01]
+ 3327 admin     0:00    0 SW   [ser_task_01]
+ 3328 admin    36:28    0 SW   [HwCtrlTask_0]
+ 3333 admin     5:07    0 SW   [DeviceTask_0]
+ 3334 admin     0:00    0 IW<  [kworker/R-ph_de]
+ 3335 admin     1h04    0 SW   [RtmpMlmeTask_01]
+ 3957 H3CT      0:16 1540 S    /sbin/udhcpc -i nas1_1 -s /usr/script/udhcpc_nod
+ 4078 admin    12:23 2304 S    /usr/bin/capwap / -d 3
+ 5270 admin     0:00    0 IW   [kworker/u9:0-ev]
+ 7686 admin     0:00    0 IW   [kworker/u10:0-e]
+13055 admin     0:00    0 IW   [kworker/3:1]
+13638 1         0:00 2304 S    -sh
+13673 admin     0:00    0 RW   [kworker/u9:2-ev]
+13687 admin     0:00 2432 S    sh
+13720 admin     0:00 2176 S    sleep 5
+13732 admin     0:00 2176 S    sh -c -- mpstat -u 1 1 | tail -n 1
+13733 admin     0:00 1152 S    mpstat -u 1 1
+13734 admin     0:00 2048 S    tail -n 1
+13740 admin     0:00 2304 R    ps -ef
+16561 admin     0:03    0 IW   [kworker/u11:1-e]
+20339 admin     0:00    0 IW   [kworker/u12:1-e]
+22746 admin     0:00    0 IW<  [kworker/3:2H]
+26005 admin     0:00    0 IW<  [kworker/2:1H-kb]
+26018 admin     0:00    0 IW   [kworker/u10:1-e]
+26937 admin     0:00    0 IW   [kworker/u9:1-ev]
+29084 admin     0:01    0 IW   [kworker/u11:2-e]
+30803 admin     0:01    0 IW   [kworker/u11:0-e]
+# 
+[2026-06-15 14:41:09] >>> lsmod
+[2026-06-15 14:41:10] lsmod
+fuse 122880 0 - Live 0xffffffc07a6d0000
+usb_storage 65536 0 - Live 0xffffffc07a6b7000
+nls_utf8 12288 0 - Live 0xffffffc07a404000
+nls_cp936 131072 0 - Live 0xffffffc07a3fc000
+sd_mod 40960 0 - Live 0xffffffc07a40a000
+scsi_mod 176128 2 usb_storage,sd_mod, Live 0xffffffc07a3ce000
+scsi_common 12288 3 usb_storage,sd_mod,scsi_mod, Live 0xffffffc07a3bc000
+mt799b 20480 0 - Live 0xffffffc07a3c0000 (PO)
+mt7993 2433024 0 - Live 0xffffffc07a3aa000 (PO)
+en_npu 28672 0 - Live 0xffffffc07a3af000 (PO)
+mtk_pci 40960 1 en_npu, Live 0xffffffc07a39d000 (PO)
+connac_if 20480 0 - Live 0xffffffc07a440000 (PO)
+mtk_hwifi 143360 5 mt799b,mt7993,en_npu,mtk_pci,connac_if, Live 0xffffffc07a412000 (PO)
+mt_wifi 9445376 5 en_npu,connac_if,mtk_hwifi, Live 0xffffffc079a98000 (PO)
+mt_wifi_osal 184320 5 mt7993,en_npu,mtk_pci,mtk_hwifi,mt_wifi, Live 0xffffffc079a68000 (O)
+cfg80211 798720 2 mt_wifi,mt_wifi_osal, Live 0xffffffc0799a1000 (O)
+compat 12288 0 - Live 0xffffffc07999b000 (O)
+gpio_button_hotplug 16384 0 - Live 0xffffffc079994000 (O)
+dying_gasp 12288 0 - Live 0xffffffc0798d6000 (PO)
+urlfilter 69632 0 - Live 0xffffffc07997e000 (O)
+lro_wan 36864 0 - Live 0xffffffc079972000 (PO)
+lro_lan 36864 0 - Live 0xffffffc07996a000 (PO)
+xpon_igmp 131072 0 - Live 0xffffffc079947000 (PO)
+ponmacfilter 16384 0 - Live 0xffffffc0798f0000 (PO)
+ponvlan 262144 0 - Live 0xffffffc079900000 (PO)
+tcportbind 32768 0 - Live 0xffffffc0798f5000 (O)
+multiwan 49152 0 - Live 0xffffffc0798e1000 (PO)
+wlanisolation 20480 0 - Live 0xffffffc0798ce000 (PO)
+vlantag_ct 16384 1 multiwan, Live 0xffffffc0798d1000 (PO)
+xponmap 61440 0 - Live 0xffffffc0798bc000 (PO)
+xpon_10g 1294336 2 - Live 0xffffffc07977d000 (PO)
+phy_10g 323584 0 - Live 0xffffffc07972b000 (PO)
+en7572 73728 0 - Live 0xffffffc079716000 (PO)
+xpon_int 32768 5 xpon_igmp,ponmacfilter,ponvlan,xponmap,xpon_10g, Live 0xffffffc079711000 (O)
+hostadpt 24576 0 - Live 0xffffffc079644000 (PO)
+hw_nat 708608 1 - Live 0xffffffc079661000 (PO)
+npu 12288 0 - Live 0xffffffc079657000 (PO)
+npu_wifi 20480 1 npu, Live 0xffffffc07964d000 (PO)
+qdma_wan 225280 0 - Live 0xffffffc07960a000 (PO)
+eth_ephy 163840 0 - Live 0xffffffc0795e3000 (PO)
+eth 245760 3 xpon_10g,hw_nat,eth_ephy, Live 0xffffffc0795a4000 (O)
+qdma_lan 249856 0 - Live 0xffffffc07956f000 (PO)
+ifc 200704 0 - Live 0xffffffc079536000 (PO)
+fe_core 221184 0 - Live 0xffffffc0794f1000 (PO)
+arht_timer 12288 0 - Live 0xffffffc079493000 (O)
+secureupgrade 12288 0 - Live 0xffffffc079475000 (O)
+nlk_msg 12288 1 - Live 0xffffffc0794c9000 (O)
+tccicmd 32768 4 gpio_button_hotplug,xpon_10g,eth_ephy,eth, Live 0xffffffc0794ec000 (O)
+accesslimit 32768 0 - Live 0xffffffc0794e7000 (O)
+module_sel 16384 0 - Live 0xffffffc079487000 (O)
+maxnetdpi 12288 0 - Live 0xffffffc07945b000 (O)
+iptable_filter 12288 1 - Live 0xffffffc0794e1000
+ipt_REJECT 12288 0 - Live 0xffffffc0794d7000
+ip6table_filter 12288 1 - Live 0xffffffc0794cd000
+ip6table_mangle 12288 0 - Live 0xffffffc0794c3000
+ebt_arp 12288 4 - Live 0xffffffc0794b9000
+ebt_vlan 12288 0 - Live 0xffffffc079469000
+ebt_mark_m 12288 2 - Live 0xffffffc0794a9000
+ebt_mark 12288 0 - Live 0xffffffc07949f000
+ebt_redirect 12288 0 - Live 0xffffffc079495000
+ebtable_broute 12288 1 - Live 0xffffffc07948b000
+ebt_ip6 12288 8 - Live 0xffffffc079481000
+ebt_ip 12288 11 - Live 0xffffffc079477000
+ebtable_filter 12288 1 - Live 0xffffffc07946d000
+ebtables 24576 2 ebtable_broute,ebtable_filter, Live 0xffffffc079460000
+info_utility 32768 0 - Live 0xffffffc079450000 (PO)
+# 
+[2026-06-15 14:41:10] >>> mount -t pstore pstore /sys/fs/pstore/
+[2026-06-15 14:41:10] mount -t pstore pstore /sys/fs/pstore/
+mount: mounting pstore on /sys/fs/pstore/ failed: Device or resource busy
+# 
+[2026-06-15 14:41:10] >>> ls -l  /sys/fs/pstore/
+[2026-06-15 14:41:11] ls -l  /sys/fs/pstore/
+total 0
+-r--r--r--    1 admin    root         67244 Mar 31 04:47 [0;0mconsole-ramoops-0[m
+# 
+[2026-06-15 14:41:11] >>> uptime
+[2026-06-15 14:41:11] uptime
+ 09:52:01 up 89 days,  1:52,  2 users,  load average: 0.19, 0.25, 0.26
+# 
+[2026-06-15 14:41:11] >>> ctrl+k
+[2026-06-15 14:41:12] ctrl+k
+sh: ctrl+k: not found
+# 
+[2026-06-15 14:41:12] ONU处理完成: 192.168.1.152
+[2026-06-15 14:41:12] 开始处理ONU: 192.168.1.120
+[2026-06-15 14:41:12] >>> telnet 192.168.1.120 10187
+[2026-06-15 14:41:14] telnet 192.168.1.120 10187
+
+[2026-06-15 14:41:14] >>> admin
+[2026-06-15 14:41:14] admin
+
+[2026-06-15 14:41:14] >>> admin
+[2026-06-15 14:41:15] admin
+
+[2026-06-15 14:41:15] >>> su
+[2026-06-15 14:41:15] su
+telnet: can't connect to remote host (192.168.1.120): No route to host
+# admin
+sh: admin: not found
+# admin
+sh: admin: not found
+# su
+# 
+[2026-06-15 14:41:15] >>> H3C@diagnosis.com
+[2026-06-15 14:41:16] H3C@diagnosis.com
+sh: H3C@diagnosis.com: not found
+# 
+[2026-06-15 14:41:16] >>> top -b -n 1
+[2026-06-15 14:41:16] top -b -n 1
+Mem: 337156K used, 71796K free, 11160K shrd, 4K buff, 120656K cached
+CPU:  4.5% usr  9.0% sys  0.0% nic 86.3% idle  0.0% io  0.0% irq  0.0% sirq
+Load average: 0.18 0.25 0.26 2/208 13873
+  PID  PPID USER     STAT   VSZ %VSZ CPU %CPU COMMAND
+  185     1 admin    S     248m  62.2   1  2.2 /userfs/bin/svchost -c /etc/central_ctrl.svc
+13870 13858 admin    R     4712   1.1   2  2.2 top -b -n 1
+ 1083     1 admin    S     532m 133.1   3  0.0 /usr/iip/client/iip_client --name iip.wlan --plugin /usr/iip/plugins/libiip_wlan.so --out /tmp/iip_wlan.out
+  117     1 admin    S     484m 121.2   1  0.0 /userfs/bin/omci
+ 1071     1 admin    S     468m 117.0   3  0.0 /usr/iip/client/iip_client --name iip_common --plugin /usr/iip/plugins/libiip_plugin.so --out /tmp/iip_common.out
+ 4078  1117 admin    S     342m  85.5   3  0.0 /usr/bin/capwap / -d 3
+ 1076     1 admin    S     332m  83.0   3  0.0 /usr/iip/client/iip_client --name iip_lan --plugin /usr/iip/plugins/libiip_lan.so --out /tmp/iip_lan.out
+  179     1 admin    S     234m  58.7   1  0.0 /userfs/bin/svchost -c /etc/wlan.svc
+  474     1 H3CT     S     160m  40.0   3  0.0 /userfs/bin/lanhostmgr_ng
+ 1038     1 admin    S     155m  38.7   3  0.0 /userfs/bin/trafficvpninfo
+ 2144     1 admin    S     155m  38.7   1  0.0 /userfs/bin/trafficvpninfo
+  181     1 admin    S     152m  38.0   1  0.0 /userfs/bin/svchost -c /etc/wan_related.svc
+  261     1 admin    S     152m  38.0   1  0.0 /userfs/bin/ponmgr_cfg
+  997     1 admin    S    98.0m  24.5   1  0.0 tcwdog -t 1 /dev/watchdog
+ 1520  1117 admin    S    89932  21.9   3  0.0 /usr/sbin/h3ccloud -c /etc/config/h3ccloud -d 8 -f /tmp/log/h3ccloud.log
+  177     1 admin    S    85368  20.8   1  0.0 /userfs/bin/svchost -c /etc/wan.svc
+ 1477  1117 admin    S    84728  20.6   3  0.0 /usr/bin/iip_lldp
+  154     1 admin    S    82792  20.2   1  0.0 /userfs/bin/svchost -c /etc/cfg.svc
+  183     1 admin    S    82216  20.0   1  0.0 /userfs/bin/svchost -c /etc/other.svc
+  187     1 admin    S    82048  20.0   1  0.0 /userfs/bin/svchost -c /etc/voip.svc
+ 1129     1 admin    S    81988  20.0   3  0.0 /userfs/bin/abnormal_diag
+ 1055     1 admin    S    76348  18.6   3  0.0 /userfs/bin/iip_lpdt
+  122     1 admin    S    33012   8.0   1  0.0 /userfs/bin/homenas
+ 2322     1 H3CT     S    16788   4.1   0  0.0 /userfs/bin/smbd -D
+ 1854     1 admin    S    16436   4.0   3  0.0 /userfs/bin/usb_auto_mount
+ 2262     1 H3CT     S     9564   2.3   0  0.0 /userfs/bin/nmbd -D
+ 3957     1 H3CT     S     9176   2.2   1  0.0 /sbin/udhcpc -i nas1_1 -s /usr/script/udhcpc_nodef.sh -H EGT904-H-T7WF -p /var/run/nas1_1/udhcpc.pid
+ 1672  1117 admin    S     8832   2.1   3  0.0 /usr/bin/wlanopt
+ 1180  1117 admin    S     8772   2.1   3  0.0 /usr/sbin/hostapd -f /tmp/log/hostap.log -K -t -dd -g /var/run/hostapd/global_ctrl
+  175     1 admin    S     8444   2.0   1  0.0 /userfs/bin/svchost -c /etc/pon.svc
+  998     1 H3CT     S     8344   2.0   3  0.0 /userfs/bin/boa -c /boaroot -d
+  834     1 H3CT     S     8144   1.9   0  0.0 /usr/bin/utelnetd -p 10187 -l /bin/login -d
+ 1047     1 admin    S     8116   1.9   3  0.0 /usr/sbin/hostapd -g /var/run/hostapd/global
+ 1048     1 admin    S     8004   1.9   3  0.0 /usr/sbin/wpa_supplicant -n -g /var/run/wpa_supplicant/global
+ 1596  1117 admin    S     6972   1.7   3  0.0 /usr/bin/wlanmgr
+ 1560  1117 admin    S     6080   1.4   3  0.0 /usr/bin/wipc
+ 1052     1 admin    S     4712   1.1   3  0.0 /bin/sh /usr/iip/iip_monitor.sh
+ 1141     1 admin    S     4712   1.1   3  0.0 /usr/sbin/crond -c /etc/crons/
+    1     0 admin    S     4712   1.1   3  0.0 init
+13687 13638 admin    S     4712   1.1   2  0.0 sh
+13858 13687 admin    S     4712   1.1   3  0.0 sh
+ 1146     1 admin    S     4712   1.1   3  0.0 init
+13638   834 1        S     4712   1.1   1  0.0 -sh
+13861  1071 admin    S     4712   1.1   3  0.0 sh -c -- mpstat -u 1 1 | tail -n 1
+13863 13861 admin    S     4712   1.1   3  0.0 tail -n 1
+13824  1052 admin    S     4580   1.1   3  0.0 sleep 5
+ 1436  1117 admin    S     3816   0.9   3  0.0 /sbin/logd -S 1024
+ 1652  1117 admin    S     3540   0.8   3  0.0 /usr/sbin/crond -f -c /etc/crontabs -l 5
+ 1114     1 admin    S     3276   0.8   3  0.0 lxc-start -n lxc -P /iip -f /opt/lxc/config -o /tmp/lxc.log -l DEBUG -d
+ 1503  1117 admin    S     2928   0.7   3  0.0 lldpd -I eth0.* -r
+ 1117  1114 admin    S     2888   0.7   3  0.0 /sbin/procd
+ 1040     1 admin    S     2824   0.6   3  0.0 /userfs/bin/wifi_traffic_mgr
+ 1437  1117 admin    S     2732   0.6   3  0.0 /sbin/logread -f -p /var/run/logread.1.pid -F /tmp/tmplogfile/log.txt -S 1024 -h H3C -u -I
+  131     1 admin    S     2632   0.6   3  0.0 /userfs/bin/ubusd
+ 1150  1117 admin    S     2376   0.5   1  0.0 /sbin/ubusd
+13862 13861 admin    S     1904   0.4   3  0.0 mpstat -u 1 1
+ 1045     1 admin    S     1876   0.4   3  0.0 /userfs/bin/core_monitor
+  222     2 admin    SW       0   0.0   2  0.0 [xpon_daemon]
+  123     2 admin    IW       0   0.0   3  0.0 [kworker/3:2-eve]
+   30     2 admin    SW       0   0.0   3  0.0 [ksoftirqd/3]
+   15     2 admin    IW       0   0.0   1  0.0 [rcu_sched]
+ 3335     2 admin    SW       0   0.0   0  0.0 [RtmpMlmeTask_01]
+ 3328     2 admin    SW       0   0.0   0  0.0 [HwCtrlTask_0]
+ 3326     2 admin    SW       0   0.0   0  0.0 [BPCCCmdQTask_01]
+   51     2 admin    IW       0   0.0   0  0.0 [kworker/0:2-eve]
+ 3333     2 admin    SW       0   0.0   2  0.0 [DeviceTask_0]
+   41     2 admin    SW       0   0.0   0  0.0 [kcompactd0]
+   20     2 admin    SW       0   0.0   1  0.0 [ksoftirqd/1]
+  102     2 admin    IW       0   0.0   1  0.0 [kworker/1:2-mm_]
+   14     2 admin    SW       0   0.0   0  0.0 [ksoftirqd/0]
+   49     2 admin    IW       0   0.0   2  0.0 [kworker/2:1-mm_]
+   25     2 admin    SW       0   0.0   2  0.0 [ksoftirqd/2]
+  939     2 admin    IW       0   0.0   3  0.0 [kworker/u12:2-e]
+16561     2 admin    IW       0   0.0   2  0.0 [kworker/u11:1-e]
+   32     2 admin    IW<      0   0.0   3  0.0 [kworker/3:0H-kb]
+30803     2 admin    IW       0   0.0   2  0.0 [kworker/u11:0-e]
+    9     2 admin    IW<      0   0.0   0  0.0 [kworker/0:0H-kv]
+29084     2 admin    IW       0   0.0   0  0.0 [kworker/u11:2-e]
+   94     2 admin    SW       0   0.0   2  0.0 [ubifs_bgt0_0]
+   22     2 admin    IW<      0   0.0   1  0.0 [kworker/1:0H-kv]
+26018     2 admin    IW       0   0.0   1  0.0 [kworker/u10:1-e]
+26005     2 admin    IW<      0   0.0   2  0.0 [kworker/2:1H-kb]
+26937     2 admin    IW       0   0.0   0  0.0 [kworker/u9:1-ev]
+   92     2 admin    SW       0   0.0   3  0.0 [ubi_bgt0d]
+   48     2 admin    IW       0   0.0   1  0.0 [kworker/1:1-eve]
+ 5270     2 admin    IW       0   0.0   0  0.0 [kworker/u9:0-ev]
+   11     2 admin    IW       0   0.0   1  0.0 [kworker/u8:0-cf]
+ 7686     2 admin    IW       0   0.0   1  0.0 [kworker/u10:0-e]
+20339     2 admin    IW       0   0.0   0  0.0 [kworker/u12:1-e]
+    2     0 admin    SW       0   0.0   2  0.0 [kthreadd]
+   16     2 admin    SW       0   0.0   0  0.0 [migration/0]
+    3     2 admin    SW       0   0.0   3  0.0 [pool_workqueue_]
+    4     2 admin    IW<      0   0.0   0  0.0 [kworker/R-rcu_g]
+    5     2 admin    IW<      0   0.0   0  0.0 [kworker/R-rcu_p]
+    6     2 admin    IW<      0   0.0   0  0.0 [kworker/R-slub_]
+    7     2 admin    IW<      0   0.0   0  0.0 [kworker/R-netns]
+    8     2 admin    IW       0   0.0   0  0.0 [kworker/0:0-eve]
+   12     2 admin    IW<      0   0.0   0  0.0 [kworker/R-mm_pe]
+   13     2 admin    IW       0   0.0   0  0.0 [rcu_tasks_trace]
+   17     2 admin    SW       0   0.0   0  0.0 [cpuhp/0]
+   18     2 admin    SW       0   0.0   1  0.0 [cpuhp/1]
+   19     2 admin    SW       0   0.0   1  0.0 [migration/1]
+   23     2 admin    SW       0   0.0   2  0.0 [cpuhp/2]
+   24     2 admin    SW       0   0.0   2  0.0 [migration/2]
+   26     2 admin    IW       0   0.0   2  0.0 [kworker/2:0-mm_]
+   27     2 admin    IW<      0   0.0   2  0.0 [kworker/2:0H-ev]
+   28     2 admin    SW       0   0.0   3  0.0 [cpuhp/3]
+   29     2 admin    SW       0   0.0   3  0.0 [migration/3]
+   37     2 admin    IW<      0   0.0   3  0.0 [kworker/R-inet_]
+   39     2 admin    SW       0   0.0   3  0.0 [oom_reaper]
+   40     2 admin    IW<      0   0.0   2  0.0 [kworker/R-write]
+   42     2 admin    IW<      0   0.0   2  0.0 [kworker/R-kbloc]
+   43     2 admin    IW<      0   0.0   2  0.0 [kworker/R-md]
+   44     2 admin    IW<      0   0.0   3  0.0 [kworker/R-md_bi]
+   45     2 admin    SW       0   0.0   3  0.0 [watchdogd]
+   46     2 admin    IW<      0   0.0   0  0.0 [kworker/0:1H]
+   47     2 admin    SW       0   0.0   3  0.0 [kswapd0]
+   52     2 admin    IW<      0   0.0   2  0.0 [kworker/R-dm_bu]
+   53     2 admin    IW<      0   0.0   3  0.0 [kworker/R-mld]
+   54     2 admin    IW<      0   0.0   2  0.0 [kworker/R-ipv6_]
+   55     2 admin    IW<      0   0.0   3  0.0 [kworker/R-kstrp]
+   57     2 admin    IW<      0   0.0   2  0.0 [kworker/R-kdmfl]
+   58     2 admin    IW<      0   0.0   3  0.0 [kworker/R-kveri]
+   66     2 admin    IW<      0   0.0   1  0.0 [kworker/1:1H]
+ 1691     2 admin    IW<      0   0.0   1  0.0 [kworker/R-cfg80]
+ 1707     2 admin    SW       0   0.0   3  0.0 [ser_mngr]
+ 1758     2 admin    IW       0   0.0   1  0.0 [kworker/u8:1]
+ 3324     2 admin    SW       0   0.0   0  0.0 [RtmpCmdQTask_01]
+ 3325     2 admin    SW       0   0.0   3  0.0 [RtmpWscTask_01]
+ 3327     2 admin    SW       0   0.0   1  0.0 [ser_task_01]
+ 3334     2 admin    IW<      0   0.0   0  0.0 [kworker/R-ph_de]
+13055     2 admin    IW       0   0.0   3  0.0 [kworker/3:1]
+13673     2 admin    IW       0   0.0   0  0.0 [kworker/u9:2-ev]
+13761  1652 admin    Z        0   0.0   3  0.0 [sh]
+22746     2 admin    IW<      0   0.0   3  0.0 [kworker/3:2H]
+
+# 
+[2026-06-15 14:41:16] >>> cat /proc/meminfo; free -m
+[2026-06-15 14:41:17] cat /proc/meminfo; free -m
+MemTotal:         408952 kB
+MemFree:           71796 kB
+MemAvailable:     101728 kB
+Buffers:               4 kB
+Cached:           120656 kB
+SwapCached:            0 kB
+Active:            39800 kB
+Inactive:         114180 kB
+Active(anon):       7232 kB
+Inactive(anon):    37248 kB
+Active(file):      32568 kB
+Inactive(file):    76932 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:         81916 kB
+SwapFree:          81916 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         33336 kB
+Mapped:            28252 kB
+Shmem:             11160 kB
+KReclaimable:       6120 kB
+Slab:              88888 kB
+SReclaimable:       6120 kB
+SUnreclaim:        82768 kB
+KernelStack:        3344 kB
+PageTables:         2900 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      286392 kB
+Committed_AS:     666996 kB
+VmallocTotal:   257687552 kB
+VmallocUsed:       44888 kB
+VmallocChunk:          0 kB
+Percpu:              720 kB
+              total        used        free      shared  buff/cache   available
+Mem:            399         205          70          11         124          99
+Swap:            80           0          80
+# 
+[2026-06-15 14:41:17] >>> cat /proc/interrupts
+[2026-06-15 14:41:17] cat /proc/interrupts
+           CPU0       CPU1       CPU2       CPU3       
+ 11:  769634611 1823535364  769632786 1269709886     GICv3  30 Level     arch_timer
+ 14:          0          0          0          0     GICv3  75 Level     phy_isr
+ 18:    1348830          0          0          0     GICv3  50 Level     ttyS0
+ 21:     556979          0          0          0     GICv3 150 Level     rxdone0
+ 22:          0          0          0          0     GICv3 151 Level     rxdone1
+ 27:          0          0          0          0     GICv3 157 Level     npuMbox2host
+ 28:          0          0          0          0     GICv3 135 Level     npu_wdog0
+ 29:          0          0          0          0     GICv3 141 Level     npu_wdog1
+ 30:          0          0          0          0     GICv3 145 Level     npu_wdog2
+ 31:          0          0          0          0     GICv3 149 Level     npu_wdog3
+ 32:          0          0          0          0     GICv3 166 Level     npu_wdog4
+ 33:          0          0          0          0     GICv3 167 Level     npu_wdog5
+ 34:          0          0          0          0     GICv3 168 Level     npu_wdog6
+ 35:          0          0          0          0     GICv3 169 Level     npu_wdog7
+ 36:          0          0          4          0     GICv3  69 Level     qdma_lan_int1
+ 37:          0          0          0          0     GICv3  87 Level     qdma_lan_int2
+ 38:          0          0          0          0     GICv3  88 Level     qdma_lan_int3
+ 40:   78883946          0          0          0     GICv3  70 Level     qdma_wan_int1
+ 41:          0          0          0          0     GICv3  90 Level     qdma_wan_int2
+ 42:          0          0          0          0     GICv3  91 Level     qdma_wan_int3
+ 43:          0          0          0          0     GICv3  92 Level     qdma_wan_int4
+ 44:          0          0          0          0     GICv3  81 Level     FE
+ 55:          0          0          0          0     GICv3  65 Level     xhci-hcd:usb1
+ 56:          0          0          0          0     GICv3 182 Level     xhci-hcd:usb3
+ 57:   12192204          0          0          0     GICv3  74 Level     xpon_isr
+ 58:          0          0          0          0     GICv3  66 Level     dying gasp
+ 59:  188495783          0          0          0      INTx   0 Edge    -INTx      mt7993-vec_data0
+ 60:    7200238          0          0          0      INTx   0 Edge    -INTx      mt799b-vec_data0
+IPI0:      1313      90982       2837     262982       Rescheduling interrupts
+IPI1:  69718840  104074436   48949290   48216643       Function call interrupts
+IPI2:         0          0          0          0       CPU stop interrupts
+IPI3:         0          0          0          0       CPU stop (for crash dump) interrupts
+IPI4:         0          0          0          0       Timer broadcast interrupts
+IPI5:         0          0          0          0       IRQ work interrupts
+IPI6:         0          0          0          0       CPU wake-up interrupts
+Err:          0
+# 
+[2026-06-15 14:41:17] >>> echo show_BoB_information > /proc/pon_phy/debug ;dmesg -c
+[2026-06-15 14:41:18] echo show_BoB_information > /proc/pon_phy/debug ;dmesg -c
+BOSA_temperature = 55.194 C
+I bias = 17.388mA
+VCC = 3.3275V
+Transciver Tx power : 40175 uW(6.05 dBm)
+Transciver Rx power : 151 uW(-18.23 dBm)
+# 
+[2026-06-15 14:41:18] >>> ps -ef
+[2026-06-15 14:41:19] ps -ef
+PID   USER     TIME  RSS  STAT COMMAND
+    1 admin     0:03 2176 S    init
+    2 admin     0:00    0 SW   [kthreadd]
+    3 admin     0:00    0 SW   [pool_workqueue_]
+    4 admin     0:00    0 IW<  [kworker/R-rcu_g]
+    5 admin     0:00    0 IW<  [kworker/R-rcu_p]
+    6 admin     0:00    0 IW<  [kworker/R-slub_]
+    7 admin     0:00    0 IW<  [kworker/R-netns]
+    8 admin     0:00    0 IW   [kworker/0:0-eve]
+    9 admin     0:01    0 IW<  [kworker/0:0H-kv]
+   11 admin     0:00    0 IW   [kworker/u8:0-cf]
+   12 admin     0:00    0 IW<  [kworker/R-mm_pe]
+   13 admin     0:00    0 IW   [rcu_tasks_trace]
+   14 admin     1:30    0 SW   [ksoftirqd/0]
+   15 admin     1h19    0 IW   [rcu_sched]
+   16 admin     0:00    0 SW   [migration/0]
+   17 admin     0:00    0 SW   [cpuhp/0]
+   18 admin     0:00    0 SW   [cpuhp/1]
+   19 admin     0:00    0 SW   [migration/1]
+   20 admin     3:09    0 SW   [ksoftirqd/1]
+   22 admin     0:00    0 IW<  [kworker/1:0H-kv]
+   23 admin     0:00    0 SW   [cpuhp/2]
+   24 admin     0:00    0 SW   [migration/2]
+   25 admin     0:05    0 SW   [ksoftirqd/2]
+   26 admin     0:00    0 IW   [kworker/2:0-mm_]
+   27 admin     0:00    0 IW<  [kworker/2:0H-ev]
+   28 admin     0:00    0 SW   [cpuhp/3]
+   29 admin     0:00    0 SW   [migration/3]
+   30 admin     1h28    0 SW   [ksoftirqd/3]
+   32 admin     0:02    0 IW<  [kworker/3:0H-kb]
+   37 admin     0:00    0 IW<  [kworker/R-inet_]
+   39 admin     0:00    0 SW   [oom_reaper]
+   40 admin     0:00    0 IW<  [kworker/R-write]
+   41 admin     3:32    0 SW   [kcompactd0]
+   42 admin     0:00    0 IW<  [kworker/R-kbloc]
+   43 admin     0:00    0 IW<  [kworker/R-md]
+   44 admin     0:00    0 IW<  [kworker/R-md_bi]
+   45 admin     0:00    0 SW   [watchdogd]
+   46 admin     0:00    0 IW<  [kworker/0:1H]
+   47 admin     0:00    0 SW   [kswapd0]
+   48 admin     0:00    0 IW   [kworker/1:1-eve]
+   49 admin     0:28    0 IW   [kworker/2:1-eve]
+   51 admin     8:45    0 IW   [kworker/0:2-eve]
+   52 admin     0:00    0 IW<  [kworker/R-dm_bu]
+   53 admin     0:00    0 IW<  [kworker/R-mld]
+   54 admin     0:00    0 IW<  [kworker/R-ipv6_]
+   55 admin     0:00    0 IW<  [kworker/R-kstrp]
+   57 admin     0:00    0 IW<  [kworker/R-kdmfl]
+   58 admin     0:00    0 IW<  [kworker/R-kveri]
+   66 admin     0:00    0 IW<  [kworker/1:1H]
+   92 admin     0:00    0 SW   [ubi_bgt0d]
+   94 admin     0:00    0 SW   [ubifs_bgt0_0]
+  102 admin     2:04    0 IW   [kworker/1:2-mm_]
+  117 admin     6h21 6400 S    /userfs/bin/omci
+  122 admin     0:00 2944 S    /userfs/bin/homenas
+  123 admin     1h51    0 IW   [kworker/3:2-eve]
+  131 admin     3h10 1280 S    /userfs/bin/ubusd
+  154 admin    46:37 4480 S    /userfs/bin/svchost -c /etc/cfg.svc
+  175 admin    20:34 3584 S    /userfs/bin/svchost -c /etc/pon.svc
+  177 admin     5h30 4736 S    /userfs/bin/svchost -c /etc/wan.svc
+  179 admin    10h58 5888 S    /userfs/bin/svchost -c /etc/wlan.svc
+  181 admin    20:32 3840 S    /userfs/bin/svchost -c /etc/wan_related.svc
+  183 admin    14:07 3712 S    /userfs/bin/svchost -c /etc/other.svc
+  185 admin     7h11 3712 S    /userfs/bin/svchost -c /etc/central_ctrl.svc
+  187 admin     8h11 3328 S    /userfs/bin/svchost -c /etc/voip.svc
+  222 admin     5h02    0 SW   [xpon_daemon]
+  261 admin     6:23 3328 S    /userfs/bin/ponmgr_cfg
+  474 H3CT      6h49 3584 S    /userfs/bin/lanhostmgr_ng
+  834 H3CT      0:01 1152 S    /usr/bin/utelnetd -p 10187 -l /bin/login -d
+  939 admin     0:04    0 IW   [kworker/u12:2-e]
+  997 admin     5:34 1152 S    tcwdog -t 1 /dev/watchdog
+  998 H3CT      0:00 2944 S    /userfs/bin/boa -c /boaroot -d
+ 1038 admin    14:27 4096 S    /userfs/bin/trafficvpninfo
+ 1040 admin     0:01 1152 S    /userfs/bin/wifi_traffic_mgr
+ 1045 admin    15:09 1024 S    /userfs/bin/core_monitor
+ 1047 admin    32:28 4608 S    /usr/sbin/hostapd -g /var/run/hostapd/global
+ 1048 admin     1:47 3328 S    /usr/sbin/wpa_supplicant -n -g /var/run/wpa_supp
+ 1052 admin    44:56 2432 S    /bin/sh /usr/iip/iip_monitor.sh
+ 1055 admin     4h25 1280 S    /userfs/bin/iip_lpdt
+ 1071 admin     1h11 4060 S    /usr/iip/client/iip_client --name iip_common --p
+ 1076 admin     4h49 4444 S    /usr/iip/client/iip_client --name iip_lan --plug
+ 1083 admin    18:52 5724 S    /usr/iip/client/iip_client --name iip.wlan --plu
+ 1114 admin     0:00 1948 S    lxc-start -n lxc -P /iip -f /opt/lxc/config -o /
+ 1117 admin     0:00 1792 S    /sbin/procd
+ 1129 admin     0:26 2944 S    /userfs/bin/abnormal_diag
+ 1141 admin     0:15 1664 S    /usr/sbin/crond -c /etc/crons/
+ 1146 admin     0:00  772 S    init
+ 1150 admin     0:20 1536 S    /sbin/ubusd
+ 1180 admin     1:41 4096 S    /usr/sbin/hostapd -f /tmp/log/hostap.log -K -t -
+ 1436 admin     0:45 2688 S    /sbin/logd -S 1024
+ 1437 admin     0:13 1536 S    /sbin/logread -f -p /var/run/logread.1.pid -F /t
+ 1477 admin     1:25 1664 S    /usr/bin/iip_lldp
+ 1503 admin     2:12 2048 S    lldpd -I eth0.* -r
+ 1520 admin     1h58 4096 S    /usr/sbin/h3ccloud -c /etc/config/h3ccloud -d 8 
+ 1560 admin     1h02 2944 S    /usr/bin/wipc
+ 1596 admin    52:58 3456 S    /usr/bin/wlanmgr
+ 1652 admin     1:17 1664 S    /usr/sbin/crond -f -c /etc/crontabs -l 5
+ 1672 admin     1h44 4480 S    /usr/bin/wlanopt
+ 1691 admin     0:00    0 IW<  [kworker/R-cfg80]
+ 1707 admin     0:00    0 SW   [ser_mngr]
+ 1758 admin     0:00    0 IW   [kworker/u8:1]
+ 1854 admin     0:00 1560 S    /userfs/bin/usb_auto_mount
+ 2144 admin    12:31 3968 S    /userfs/bin/trafficvpninfo
+ 2262 H3CT      2:40 2868 S    /userfs/bin/nmbd -D
+ 2322 H3CT      1:54 7156 S    /userfs/bin/smbd -D
+ 3324 admin     0:00    0 SW   [RtmpCmdQTask_01]
+ 3325 admin     0:00    0 SW   [RtmpWscTask_01]
+ 3326 admin    17:30    0 SW   [BPCCCmdQTask_01]
+ 3327 admin     0:00    0 SW   [ser_task_01]
+ 3328 admin    36:28    0 SW   [HwCtrlTask_0]
+ 3333 admin     5:07    0 SW   [DeviceTask_0]
+ 3334 admin     0:00    0 IW<  [kworker/R-ph_de]
+ 3335 admin     1h04    0 SW   [RtmpMlmeTask_01]
+ 3957 H3CT      0:16 1540 S    /sbin/udhcpc -i nas1_1 -s /usr/script/udhcpc_nod
+ 4078 admin    12:23 2304 S    /usr/bin/capwap / -d 3
+ 5270 admin     0:00    0 IW   [kworker/u9:0-ev]
+ 7686 admin     0:00    0 IW   [kworker/u10:0-e]
+13055 admin     0:00    0 IW   [kworker/3:1]
+13638 1         0:00 2304 S    -sh
+13673 admin     0:00    0 IW   [kworker/u9:2-ev]
+13687 admin     0:00 2432 S    sh
+13761 admin     0:00    0 Z    [sh]
+13858 admin     0:00 2432 S    sh
+13889 admin     0:00 2176 S    sh -c -- mpstat -u 1 1 | tail -n 1
+13890 admin     0:00 1152 S    mpstat -u 1 1
+13891 admin     0:00 2048 S    tail -n 1
+13901 admin     0:00 2176 S    sleep 5
+13909 admin     0:00 2176 R    ps -ef
+16561 admin     0:03    0 IW   [kworker/u11:1-e]
+20339 admin     0:00    0 IW   [kworker/u12:1-e]
+22746 admin     0:00    0 IW<  [kworker/3:2H]
+26005 admin     0:00    0 IW<  [kworker/2:1H-kb]
+26018 admin     0:00    0 IW   [kworker/u10:1-e]
+26937 admin     0:00    0 IW   [kworker/u9:1-ev]
+29084 admin     0:01    0 IW   [kworker/u11:2-e]
+30803 admin     0:01    0 IW   [kworker/u11:0-e]
+# 
+[2026-06-15 14:41:19] >>> lsmod
+[2026-06-15 14:41:19] lsmod
+fuse 122880 0 - Live 0xffffffc07a6d0000
+usb_storage 65536 0 - Live 0xffffffc07a6b7000
+nls_utf8 12288 0 - Live 0xffffffc07a404000
+nls_cp936 131072 0 - Live 0xffffffc07a3fc000
+sd_mod 40960 0 - Live 0xffffffc07a40a000
+scsi_mod 176128 2 usb_storage,sd_mod, Live 0xffffffc07a3ce000
+scsi_common 12288 3 usb_storage,sd_mod,scsi_mod, Live 0xffffffc07a3bc000
+mt799b 20480 0 - Live 0xffffffc07a3c0000 (PO)
+mt7993 2433024 0 - Live 0xffffffc07a3aa000 (PO)
+en_npu 28672 0 - Live 0xffffffc07a3af000 (PO)
+mtk_pci 40960 1 en_npu, Live 0xffffffc07a39d000 (PO)
+connac_if 20480 0 - Live 0xffffffc07a440000 (PO)
+mtk_hwifi 143360 5 mt799b,mt7993,en_npu,mtk_pci,connac_if, Live 0xffffffc07a412000 (PO)
+mt_wifi 9445376 5 en_npu,connac_if,mtk_hwifi, Live 0xffffffc079a98000 (PO)
+mt_wifi_osal 184320 5 mt7993,en_npu,mtk_pci,mtk_hwifi,mt_wifi, Live 0xffffffc079a68000 (O)
+cfg80211 798720 2 mt_wifi,mt_wifi_osal, Live 0xffffffc0799a1000 (O)
+compat 12288 0 - Live 0xffffffc07999b000 (O)
+gpio_button_hotplug 16384 0 - Live 0xffffffc079994000 (O)
+dying_gasp 12288 0 - Live 0xffffffc0798d6000 (PO)
+urlfilter 69632 0 - Live 0xffffffc07997e000 (O)
+lro_wan 36864 0 - Live 0xffffffc079972000 (PO)
+lro_lan 36864 0 - Live 0xffffffc07996a000 (PO)
+xpon_igmp 131072 0 - Live 0xffffffc079947000 (PO)
+ponmacfilter 16384 0 - Live 0xffffffc0798f0000 (PO)
+ponvlan 262144 0 - Live 0xffffffc079900000 (PO)
+tcportbind 32768 0 - Live 0xffffffc0798f5000 (O)
+multiwan 49152 0 - Live 0xffffffc0798e1000 (PO)
+wlanisolation 20480 0 - Live 0xffffffc0798ce000 (PO)
+vlantag_ct 16384 1 multiwan, Live 0xffffffc0798d1000 (PO)
+xponmap 61440 0 - Live 0xffffffc0798bc000 (PO)
+xpon_10g 1294336 2 - Live 0xffffffc07977d000 (PO)
+phy_10g 323584 0 - Live 0xffffffc07972b000 (PO)
+en7572 73728 0 - Live 0xffffffc079716000 (PO)
+xpon_int 32768 5 xpon_igmp,ponmacfilter,ponvlan,xponmap,xpon_10g, Live 0xffffffc079711000 (O)
+hostadpt 24576 0 - Live 0xffffffc079644000 (PO)
+hw_nat 708608 1 - Live 0xffffffc079661000 (PO)
+npu 12288 0 - Live 0xffffffc079657000 (PO)
+npu_wifi 20480 1 npu, Live 0xffffffc07964d000 (PO)
+qdma_wan 225280 0 - Live 0xffffffc07960a000 (PO)
+eth_ephy 163840 0 - Live 0xffffffc0795e3000 (PO)
+eth 245760 3 xpon_10g,hw_nat,eth_ephy, Live 0xffffffc0795a4000 (O)
+qdma_lan 249856 0 - Live 0xffffffc07956f000 (PO)
+ifc 200704 0 - Live 0xffffffc079536000 (PO)
+fe_core 221184 0 - Live 0xffffffc0794f1000 (PO)
+arht_timer 12288 0 - Live 0xffffffc079493000 (O)
+secureupgrade 12288 0 - Live 0xffffffc079475000 (O)
+nlk_msg 12288 1 - Live 0xffffffc0794c9000 (O)
+tccicmd 32768 4 gpio_button_hotplug,xpon_10g,eth_ephy,eth, Live 0xffffffc0794ec000 (O)
+accesslimit 32768 0 - Live 0xffffffc0794e7000 (O)
+module_sel 16384 0 - Live 0xffffffc079487000 (O)
+maxnetdpi 12288 0 - Live 0xffffffc07945b000 (O)
+iptable_filter 12288 1 - Live 0xffffffc0794e1000
+ipt_REJECT 12288 0 - Live 0xffffffc0794d7000
+ip6table_filter 12288 1 - Live 0xffffffc0794cd000
+ip6table_mangle 12288 0 - Live 0xffffffc0794c3000
+ebt_arp 12288 4 - Live 0xffffffc0794b9000
+ebt_vlan 12288 0 - Live 0xffffffc079469000
+ebt_mark_m 12288 2 - Live 0xffffffc0794a9000
+ebt_mark 12288 0 - Live 0xffffffc07949f000
+ebt_redirect 12288 0 - Live 0xffffffc079495000
+ebtable_broute 12288 1 - Live 0xffffffc07948b000
+ebt_ip6 12288 8 - Live 0xffffffc079481000
+ebt_ip 12288 11 - Live 0xffffffc079477000
+ebtable_filter 12288 1 - Live 0xffffffc07946d000
+ebtables 24576 2 ebtable_broute,ebtable_filter, Live 0xffffffc079460000
+info_utility 32768 0 - Live 0xffffffc079450000 (PO)
+# 
+[2026-06-15 14:41:19] >>> mount -t pstore pstore /sys/fs/pstore/
+[2026-06-15 14:41:20] mount -t pstore pstore /sys/fs/pstore/
+mount: mounting pstore on /sys/fs/pstore/ failed: Device or resource busy
+# 
+[2026-06-15 14:41:20] >>> ls -l  /sys/fs/pstore/
+[2026-06-15 14:41:20] 用户停止任务
+[2026-06-15 14:41:20] 任务结束

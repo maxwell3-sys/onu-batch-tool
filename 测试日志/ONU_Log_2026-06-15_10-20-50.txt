@@ -1,0 +1,139 @@
+[2026-06-15 10:21:08] 共检测到 2 个ONU
+[2026-06-15 10:21:08] Telnet连接OLT: 172.16.182.2
+[2026-06-15 10:21:09] 
+[2026-06-15 10:21:10] 
+******************************************************************************
+* Copyright (c) 2004-2024 New H3C Technologies Co., Ltd. All rights reserved.*
+* Without the owner's prior written consent,                                 *
+* no decompiling or reverse-engineering shall be allowed.                    *
+******************************************************************************
+
+<H3C>
+<H3C>
+[2026-06-15 10:21:12] 
+<H3C>
+[2026-06-15 10:21:12] 开始处理ONU: 192.168.99.2
+[2026-06-15 10:21:12] >>> telnet 192.168.99.2 23
+[2026-06-15 10:21:14] telnet 192.168.99.2 23
+Trying 192.168.99.2 ...
+Press CTRL+K to abort
+Connected to 192.168.99.2 ...
+tc login: 
+[2026-06-15 10:21:14] >>> admin
+[2026-06-15 10:21:15] admin
+Password: 
+[2026-06-15 10:21:15] >>> admin
+[2026-06-15 10:21:16] 
+
+**************************************************************************
+*    Copyright (c) 2004-2023 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-06-15 10:21:16] >>> sys
+[2026-06-15 10:21:17] sys
+System View: return to User View with Ctrl+Z.
+[H3C]
+[2026-06-15 10:21:17] >>> debug
+[2026-06-15 10:21:18] debug
+
+Login authentication
+Password: 
+[2026-06-15 10:21:19] >>> diagnosis
+[2026-06-15 10:21:19] *********
+# 
+[2026-06-15 10:21:20] >>> tcapi show xpon
+[2026-06-15 10:21:20] tcapi show xpon
+OID [129:1][XPON]:
+
+	OID [130:1][Common]:
+		[phyStatus = epon_phy_up]
+		[trafficStatus = up]
+		[startXpon = No]
+		[CfgLoading = Done]
+
+	OID [131:1][LinkCfg]:
+		[Mode = 4]
+		[LinkSta = 0]
+
+	OID [132:1][TR069]:
+
+	OID [133:1][VOICE]:
+
+	OID [134:1][IPHost1]:
+
+	OID [135:1][IPHost2]:
+
+
+# 
+[2026-06-15 10:21:21] >>> cmd(ctrl+k)
+[2026-06-15 10:21:21] 
+<H3C>
+[2026-06-15 10:21:22] ONU处理完成: 192.168.99.2
+[2026-06-15 10:21:22] 开始处理ONU: 192.168.99.3
+[2026-06-15 10:21:22] >>> telnet 192.168.99.3 23
+[2026-06-15 10:21:24] telnet 192.168.99.3 23
+Trying 192.168.99.3 ...
+Press CTRL+K to abort
+Connected to 192.168.99.3 ...
+tc login: 
+[2026-06-15 10:21:24] >>> admin
+[2026-06-15 10:21:24] admin
+Password: 
+[2026-06-15 10:21:25] >>> admin
+[2026-06-15 10:21:25] 
+
+**************************************************************************
+*    Copyright (c) 2004-2022 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-06-15 10:21:26] >>> sys
+[2026-06-15 10:21:26] sys
+System View: return to User View with Ctrl+Z.
+[H3C]
+[2026-06-15 10:21:27] >>> debug
+[2026-06-15 10:21:27] debug
+
+Login authentication
+Password: 
+[2026-06-15 10:21:28] >>> diagnosis
+[2026-06-15 10:21:28] *********
+# 
+[2026-06-15 10:21:29] >>> tcapi show xpon
+[2026-06-15 10:21:29] tcapi show xpon
+OID [129:1][XPON]:
+
+	OID [130:1][Common]:
+		[phyStatus = epon_phy_up]
+		[trafficStatus = up]
+		[startXpon = No]
+		[CfgLoading = Done]
+
+	OID [131:1][LinkCfg]:
+		[Mode = 2]
+		[LinkSta = 0]
+
+	OID [132:1][TR069]:
+
+	OID [133:1][VOICE]:
+
+	OID [134:1][IPHost1]:
+
+	OID [135:1][IPHost2]:
+
+
+# 
+[2026-06-15 10:21:30] >>> cmd(ctrl+k)
+[2026-06-15 10:21:30] 
+<H3C>
+[2026-06-15 10:21:31] ONU处理完成: 192.168.99.3
+[2026-06-15 10:21:31] 任务结束

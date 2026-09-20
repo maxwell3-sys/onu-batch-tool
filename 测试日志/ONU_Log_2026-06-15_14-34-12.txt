@@ -1,0 +1,143 @@
+[2026-06-15 14:34:16] 共检测到 2 个ONU
+[2026-06-15 14:34:16] Telnet连接OLT: 172.16.182.2
+[2026-06-15 14:34:17] 
+[2026-06-15 14:34:19] 
+******************************************************************************
+* Copyright (c) 2004-2024 New H3C Technologies Co., Ltd. All rights reserved.*
+* Without the owner's prior written consent,                                 *
+* no decompiling or reverse-engineering shall be allowed.                    *
+******************************************************************************
+
+<H3C>
+<H3C>
+[2026-06-15 14:34:21] 
+<H3C>
+[2026-06-15 14:34:21] 开始处理ONU: 192.168.99.2
+[2026-06-15 14:34:21] >>> telnet 192.168.99.2 23
+[2026-06-15 14:34:23] telnet 192.168.99.2 23
+Trying 192.168.99.2 ...
+Press CTRL+K to abort
+Connected to 192.168.99.2 ...
+tc login: 
+[2026-06-15 14:34:23] >>> admin
+[2026-06-15 14:34:23] admin
+Password: 
+[2026-06-15 14:34:24] >>> admin
+[2026-06-15 14:34:24] 
+
+**************************************************************************
+*    Copyright (c) 2004-2023 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-06-15 14:34:25] >>> sys
+[2026-06-15 14:34:25] sys
+System View: return to User View with Ctrl+Z.
+[H3C]
+[2026-06-15 14:34:26] >>> debug
+[2026-06-15 14:34:26] debug
+
+Login authentication
+Password: 
+[2026-06-15 14:34:27] >>> diagnosis
+[2026-06-15 14:34:27] *********
+# 
+[2026-06-15 14:34:28] >>> tcapi show xpon
+[2026-06-15 14:34:29] tcapi show xpon
+OID [129:1][XPON]:
+
+	OID [130:1][Common]:
+		[phyStatus = epon_phy_up]
+		[trafficStatus = up]
+		[startXpon = No]
+		[CfgLoading = Done]
+
+	OID [131:1][LinkCfg]:
+		[Mode = 4]
+		[LinkSta = 0]
+
+	OID [132:1][TR069]:
+
+	OID [133:1][VOICE]:
+
+	OID [134:1][IPHost1]:
+
+	OID [135:1][IPHost2]:
+
+
+# 
+[2026-06-15 14:34:29] >>> cmd(wait3)
+[2026-06-15 14:34:32] >>> cmd(ctrl+k)
+[2026-06-15 14:34:33] 
+<H3C>
+[2026-06-15 14:34:33] ONU处理完成: 192.168.99.2
+[2026-06-15 14:34:33] 开始处理ONU: 192.168.99.3
+[2026-06-15 14:34:33] >>> telnet 192.168.99.3 23
+[2026-06-15 14:34:35] telnet 192.168.99.3 23
+Trying 192.168.99.3 ...
+Press CTRL+K to abort
+Connected to 192.168.99.3 ...
+tc login: 
+[2026-06-15 14:34:35] >>> admin
+[2026-06-15 14:34:36] admin
+Password: 
+[2026-06-15 14:34:36] >>> admin
+[2026-06-15 14:34:37] 
+
+**************************************************************************
+*    Copyright (c) 2004-2022 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-06-15 14:34:37] >>> sys
+[2026-06-15 14:34:38] >>> debug
+[2026-06-15 14:34:40] sys
+System View: return to User View with Ctrl+Z.
+[H3C]debug
+
+Login authentication
+Password: 
+[2026-06-15 14:34:40] >>> diagnosis
+[2026-06-15 14:34:40] *********
+# 
+[2026-06-15 14:34:41] >>> tcapi show xpon
+[2026-06-15 14:34:41] tcapi show xpon
+OID [129:1][XPON]:
+
+	OID [130:1][Common]:
+		[phyStatus = epon_phy_up]
+		[trafficStatus = up]
+		[startXpon = No]
+		[CfgLoading = Done]
+
+	OID [131:1][LinkCfg]:
+		[Mode = 2]
+		[LinkSta = 0]
+
+	OID [132:1][TR069]:
+
+	OID [133:1][VOICE]:
+
+	OID [134:1][IPHost1]:
+
+	OID [135:1][IPHost2]:
+
+
+# 
+[2026-06-15 14:34:42] >>> cmd(wait3)
+[2026-06-15 14:34:45] >>> cmd(ctrl+k)
+[2026-06-15 14:34:45] 
+<H3C>
+[2026-06-15 14:34:46] ONU处理完成: 192.168.99.3
+[2026-06-15 14:34:46] 任务结束
+[2026-06-15 14:40:40] 已添加 1 个定时任务
+[2026-06-15 14:40:40] 定时: 2026-06-15 14:41:00
+[2026-06-15 14:41:00] 定时任务开始执行: 2026-06-15 14:41:00

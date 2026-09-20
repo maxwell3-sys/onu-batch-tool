@@ -1,0 +1,99 @@
+[2026-06-15 10:59:34] 共检测到 2 个ONU
+[2026-06-15 10:59:34] Telnet连接OLT: 172.16.182.2
+[2026-06-15 10:59:35] 
+[2026-06-15 10:59:36] 
+******************************************************************************
+* Copyright (c) 2004-2024 New H3C Technologies Co., Ltd. All rights reserved.*
+* Without the owner's prior written consent,                                 *
+* no decompiling or reverse-engineering shall be allowed.                    *
+******************************************************************************
+
+<H3C>
+<H3C>
+[2026-06-15 10:59:38] 
+<H3C>
+[2026-06-15 10:59:38] 开始处理ONU: 192.168.99.2
+[2026-06-15 10:59:38] >>> telnet 192.168.99.2 23
+[2026-06-15 10:59:40] telnet 192.168.99.2 23
+Trying 192.168.99.2 ...
+Press CTRL+K to abort
+Connected to 192.168.99.2 ...
+tc login: 
+[2026-06-15 10:59:40] >>> admin
+[2026-06-15 10:59:41] admin
+Password: 
+[2026-06-15 10:59:41] >>> admin
+[2026-06-15 10:59:42] 
+
+**************************************************************************
+*    Copyright (c) 2004-2023 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-06-15 10:59:42] >>> sys
+[2026-06-15 10:59:43] sys
+System View: return to User View with Ctrl+Z.
+[H3C]
+[2026-06-15 10:59:43] >>> debug
+[2026-06-15 10:59:44] debug
+
+Login authentication
+Password: 
+[2026-06-15 10:59:44] >>> diagnosis
+[2026-06-15 10:59:45] *********
+# 
+[2026-06-15 10:59:45] >>> cmd(wait:3)
+[2026-06-15 10:59:46] cmd(wait:3)
+/bin/sh: Syntax error: word unexpected (expecting ")")
+# 
+[2026-06-15 10:59:46] >>> cmd(ctrl+k)
+[2026-06-15 10:59:47] 
+<H3C>
+[2026-06-15 10:59:47] ONU处理完成: 192.168.99.2
+[2026-06-15 10:59:47] 开始处理ONU: 192.168.99.3
+[2026-06-15 10:59:47] >>> telnet 192.168.99.3 23
+[2026-06-15 10:59:49] telnet 192.168.99.3 23
+Trying 192.168.99.3 ...
+Press CTRL+K to abort
+Connected to 192.168.99.3 ...
+tc login: 
+[2026-06-15 10:59:49] >>> admin
+[2026-06-15 10:59:50] admin
+Password: 
+[2026-06-15 10:59:50] >>> admin
+[2026-06-15 10:59:51] 
+
+**************************************************************************
+*    Copyright (c) 2004-2022 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-06-15 10:59:51] >>> sys
+[2026-06-15 10:59:52] sys
+System View: return to User View with Ctrl+Z.
+[H3C]
+[2026-06-15 10:59:52] >>> debug
+[2026-06-15 10:59:53] debug
+
+Login authentication
+Password: 
+[2026-06-15 10:59:53] >>> diagnosis
+[2026-06-15 10:59:54] *********
+# 
+[2026-06-15 10:59:54] >>> cmd(wait:3)
+[2026-06-15 10:59:55] cmd(wait:3)
+/bin/sh: Syntax error: word unexpected (expecting ")")
+# 
+[2026-06-15 10:59:55] >>> cmd(ctrl+k)
+[2026-06-15 10:59:56] 
+<H3C>
+[2026-06-15 10:59:56] ONU处理完成: 192.168.99.3
+[2026-06-15 10:59:56] 任务结束

@@ -1,0 +1,103 @@
+[2026-06-15 11:03:12] 共检测到 1 个ONU
+[2026-06-15 11:03:12] Telnet连接OLT: 172.16.182.2
+[2026-06-15 11:03:13] 
+[2026-06-15 11:03:14] 
+******************************************************************************
+* Copyright (c) 2004-2024 New H3C Technologies Co., Ltd. All rights reserved.*
+* Without the owner's prior written consent,                                 *
+* no decompiling or reverse-engineering shall be allowed.                    *
+******************************************************************************
+
+<H3C>
+<H3C>
+[2026-06-15 11:03:16] 
+<H3C>
+[2026-06-15 11:03:16] 开始处理ONU: 192.168.99.2
+[2026-06-15 11:03:16] >>> telnet 192.168.99.2 23
+[2026-06-15 11:03:18] telnet 192.168.99.2 23
+Trying 192.168.99.2 ...
+Press CTRL+K to abort
+Connected to 192.168.99.2 ...
+tc login: 
+[2026-06-15 11:03:18] >>> admin
+[2026-06-15 11:03:18] admin
+Password: 
+[2026-06-15 11:03:19] >>> admin
+[2026-06-15 11:03:19] 
+
+**************************************************************************
+*    Copyright (c) 2004-2023 New H3C Technologies Co., Ltd.              *
+*    All rights Reserved.                                                *
+*    Without the owner's prior written consent,                          *
+*    no decompiling or reverse-engineering shall be allowed.             *
+**************************************************************************
+
+Please press ENTER.
+<H3C>
+[2026-06-15 11:03:20] >>> sys
+[2026-06-15 11:03:20] sys
+System View: return to User View with Ctrl+Z.
+[H3C]
+[2026-06-15 11:03:21] >>> debug
+[2026-06-15 11:03:21] debug
+
+Login authentication
+Password: 
+[2026-06-15 11:03:22] >>> diagnosis
+[2026-06-15 11:03:22] *********
+# 
+[2026-06-15 11:03:23] >>> tcapi show xpon
+[2026-06-15 11:03:23] tcapi show xpon
+OID [129:1][XPON]:
+
+	OID [130:1][Common]:
+		[phyStatus = epon_phy_up]
+		[trafficStatus = up]
+		[startXpon = No]
+		[CfgLoading = Done]
+
+	OID [131:1][LinkCfg]:
+		[Mode = 4]
+		[LinkSta = 0]
+
+	OID [132:1][TR069]:
+
+	OID [133:1][VOICE]:
+
+	OID [134:1][IPHost1]:
+
+	OID [135:1][IPHost2]:
+
+
+# 
+[2026-06-15 11:03:24] >>> cmd(up)
+[2026-06-15 11:03:24] # tcapi show xpon[J
+[2026-06-15 11:03:25] >>> cmd(enter)
+[2026-06-15 11:03:25] 
+OID [129:1][XPON]:
+
+	OID [130:1][Common]:
+		[phyStatus = epon_phy_up]
+		[trafficStatus = up]
+		[startXpon = No]
+		[CfgLoading = Done]
+
+	OID [131:1][LinkCfg]:
+		[Mode = 4]
+		[LinkSta = 0]
+
+	OID [132:1][TR069]:
+
+	OID [133:1][VOICE]:
+
+	OID [134:1][IPHost1]:
+
+	OID [135:1][IPHost2]:
+
+
+# 
+[2026-06-15 11:03:26] >>> cmd(ctrl+k)
+[2026-06-15 11:03:26] 
+<H3C>
+[2026-06-15 11:03:27] ONU处理完成: 192.168.99.2
+[2026-06-15 11:03:27] 任务结束
